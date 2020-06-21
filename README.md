@@ -18,7 +18,14 @@ For more complicated configuration, you might need to modify the code in [keymap
 
 ## Installation
 
-1) Ensure you have Python 3 available on your system
+1) Ensure you have Python 3 and pip (sudo apt-get install python3-distutils) available on your system
+
+if pip install errors, then:
+https://github.com/MichaelGrupp/evo/issues/42
+
+also
+
+sudo apt-get install python3-dev
 
 2) Run the following shell commands (macOS):
 
@@ -28,6 +35,20 @@ pipenv shell
 pip install --global-option='build_ext' --global-option='-I/usr/local/include' --global-option='-L/usr/local/lib' pyaudio
 pipenv install
 ```
+2. Ubuntu:
+
+Install portaudio
+
+Download here
+http://www.portaudio.com/download.html
+
+Build instructions here
+http://portaudio.com/docs/v19-doxydocs/compile_linux.html
+sudo apt-get install libasound-dev
+./configure && make
+sudo make install
+
+install pyaudio
 
 3) Run offkeyboard:
 
